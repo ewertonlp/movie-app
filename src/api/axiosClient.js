@@ -8,13 +8,13 @@ const axiosClient = axios.create({
     headers: {
         'content-type': 'application/json'
     },
-    paramsSerializer: params => queryString.stringify({...params, api_key: apiConfig.apiKey}),
+    paramsSerializer: { serialize: (params) => queryString.stringify({...params, api_key: apiConfig.apiKey})}
 });
 
 axiosClient.interceptors.request.use(async (config) => config);
 
 axiosClient.interceptors.response.use((response) => {
-    if(response && response.data) {
+    if (response && response.data) {
         return response.data;
     }
 
