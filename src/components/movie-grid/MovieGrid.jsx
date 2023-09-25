@@ -121,13 +121,13 @@ const MovieSearch = props => {
         <div className="movie-search">
             <Input
                 type="text"
-                placeholder="Enter keyword"
+                placeholder="Procure por filmes, séries..."
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
             />
             <Button className="small" onClick={goToSearch} >
                 <BiSearch className='btn-icon'/>
-                Search</Button>
+                Pesquisar</Button>
         </div>
 
     )
