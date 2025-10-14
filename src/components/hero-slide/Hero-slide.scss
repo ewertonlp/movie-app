@@ -1,10 +1,10 @@
 @use '../../scss/' as *;
 
 .hero-slide {
-    margin-bottom: 3rem
+    margin-bottom: 3rem;
 }
 
-.hero-slide__item{
+.hero-slide__item {
     padding: 11rem 0 9rem 3rem;
     width: 100%;
     position: relative;
@@ -28,11 +28,23 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        background-image: linear-gradient(to top, $bg-color, rgba($black,0));
+        height: 200px; // Altura do degradê
+        background: linear-gradient(
+            to top,
+            rgba($black, 0.95) 0%,
+            rgba($black, 0.7) 25%,
+            rgba($black, 0.4) 50%,
+            rgba($black, 0.1) 75%,
+            transparent 100%
+        );
+        pointer-events: none;
+        z-index: 1;
     }
 
     &__content {
         @include flex(center, flex-start);
+        position: relative; 
+        z-index: 2; 
 
         &__info {
             width: 55%;
@@ -62,8 +74,13 @@
                 font-size: 1.15rem;
             }
 
-            .btns > * ~ *{
-                margin-left: 1rem;
+            .btns {
+                 display: flex;
+                 align-items: center;
+            }
+
+            .btns > * ~ * {
+                margin-left: 2rem;
             }
 
             .btns, .title, .overview {
@@ -77,7 +94,6 @@
             flex: 0.5;
             @include flex(center, flex-start);
             position: relative;
-            
 
             img {
                 width: 400px;
@@ -118,6 +134,62 @@
 
         .btns {
             transition-delay: .5s, .5s;
+        }
+    }
+}
+
+// Adicione estas media queries no final do seu arquivo
+@include tablet {
+    .hero-slide__item {
+        padding: 8rem 0 6rem 1.5rem;
+        
+        &::after {
+            height: 150px; // Menor altura no mobile
+            background: linear-gradient(
+                to top,
+                rgba($black, 0.95) 0%,
+                rgba($black, 0.6) 30%,
+                rgba($black, 0.3) 60%,
+                transparent 90%
+            );
+        }
+
+        &__content {
+            &__info {
+                .title {
+                    font-size: 2.5rem;
+                }
+                
+                .overview {
+                    font-size: 1rem;
+                }
+                
+                .btns > * ~ * {
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .hero-slide__item {
+        padding: 6rem 0 4rem 1rem;
+        
+        &::after {
+            height: 120px;
+        }
+
+        &__content {
+            &__info {
+                .title {
+                    font-size: 2rem;
+                }
+                
+                .overview {
+                    font-size: 0.9rem;
+                }
+            }
         }
     }
 }

@@ -1,35 +1,73 @@
 import React, { useState, useEffect, useRef } from 'react';
-
 import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi';
+import tmdbApi, { category } from '../../api/tmdbApi';
 import apiConfig from '../../api/apiConfig';
 
-import Button, { OutlineButton } from '../button/Button';
+import Button, { OutlineButton, LinkButton } from '../button/Button';
 import Modal, { ModalContent } from '../modal/Modal';
 
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './hero-slide.scss';
 
 const HeroSlide = () => {
-
     SwiperCore.use([Autoplay]);
 
     const [movieItems, setMovieItems] = useState([]);
 
     useEffect(() => {
         const getMovies = async () => {
-            const params = { page: 1 }
-            const response = await tmdbApi.getMoviesList(movieType.popular, { params });
-            setMovieItems(response.results.slice(1, 5));
-            console.log(response);
-        }
+            try {
+                // Gêneros LGBT para buscar
+                const lgbtGenres = [18, 35, 10749]; // Drama, Comédia, Romance
+                let allLgbtMovies = [];
+
+                // Busca filmes LGBT de vários gêneros
+                for (const genreId of lgbtGenres) {
+                    try {
+                        const movies = await tmdbApi.getLgbtMoviesByGenre(genreId, { page: 1 }, 3);
+                        if (movies && movies.length > 0) {
+                            allLgbtMovies = [...allLgbtMovies, ...movies];
+                        }
+                    } catch (error) {
+                        console.error(`Erro no gênero ${genreId}:`, error);
+                    }
+                }
+
+                // Remove duplicatas e seleciona os melhores (com backdrop)
+                const uniqueMovies = allLgbtMovies.filter((movie, index, self) =>
+                    index === self.findIndex(m => m.id === movie.id)
+                );
+
+                // Filtra filmes com backdrop e ordena por popularidade
+                const filteredMovies = uniqueMovies
+                    .filter(movie => movie.backdrop_path || movie.poster_path)
+                    .sort((a, b) => (b.vote_average || 0) - (a.vote_average || 0))
+                    .slice(0, 4);
+
+                if (filteredMovies.length >= 3) {
+                    setMovieItems(filteredMovies);
+                } else {
+                    // Fallback para filmes populares
+                    const params = { page: 1 };
+                    const response = await tmdbApi.getMoviesList('popular', { params });
+                    const popularMovies = response.results
+                        .filter(movie => movie.backdrop_path)
+                        .slice(0, 4);
+                    setMovieItems(popularMovies);
+                }
+
+            } catch (error) {
+                console.error('Erro ao buscar filmes para HeroSlide:', error);
+                // Fallback final
+                const params = { page: 1 };
+                const response = await tmdbApi.getMoviesList('popular', { params });
+                setMovieItems(response.results.slice(0, 4));
+            }
+        };
         getMovies();
     }, []);
-
-
-
 
     return (
         <div className='hero-slide'>
@@ -38,27 +76,26 @@ const HeroSlide = () => {
                 grabCursor={true}
                 spaceBetween={0}
                 slidesPerView={1}
-                autoplay={{ delay: 4000 }}
+                autoplay={{ delay: 10000 }}
             >
-                {
-                    movieItems.map((item, i) => (
-                        <SwiperSlide key={i}>
-                            {({ isActive }) => (
-                                <HeroSlideItem item={item} className={`${isActive ? 'active' : ''}`} />
-                            )}
-                        </SwiperSlide>
-                    ))
-                }
+                {movieItems.map((item, i) => (
+                    <SwiperSlide key={i}>
+                        {({ isActive }) => (
+                            <HeroSlideItem item={item} className={`${isActive ? 'active' : ''}`} />
+                        )}
+                    </SwiperSlide>
+                ))}
             </Swiper>
-            {
-                movieItems.map((item, i) => <TrailerModal key={i} item={item} />)
-            }
+            {movieItems.map((item, i) => <TrailerModal key={i} item={item} />)}
         </div>
     );
 }
 
+// ... (HeroSlideItem e TrailerModal permanecem iguais ao código acima)
+
+
 const HeroSlideItem = props => {
-    let hisrory = useHistory();
+    const navigate = useNavigate()
     const item = props.item;
     const background = apiConfig.originalImage(item.backdrop_path ? item.backdrop_path : item.poster_path);
 
@@ -90,12 +127,12 @@ const HeroSlideItem = props => {
                     <h2 className="title">{item.title}</h2>
                     <div className="overview">{item.overview}</div>
                     <div className="btns">
-                        <Button onClick={() => hisrory.push('/movie/' + item.id)}>
-                            Watch now
+                        <Button onClick={() => navigate('/movie/' + item.id)}>
+                            Watch Now
                         </Button>
-                        <OutlineButton onClick={setModalActive}>
-                            Watch trailer
-                        </OutlineButton>
+                        <LinkButton onClick={setModalActive}>
+                            Watch Trailer
+                        </LinkButton>
                     </div>
                 </div>
 

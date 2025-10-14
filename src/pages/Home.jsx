@@ -1,59 +1,36 @@
 import React from 'react';
-import { OutlineButton } from '../components/button/Button';
+import { Button } from '../components/button/Button';
 import { Link } from 'react-router-dom';
-
 import HeroSlide from '../components/hero-slide/HeroSlide';
 import MovieList from '../components/movie-list/MovieList';
-
+import LgbtSection from "../components/movie-list/LgbtSection";
 import { category, movieType, tvType } from '../api/tmdbApi';
 
 const Home = () => {
   return (
     <>
+      {/* Hero principal */}
       <HeroSlide />
-      <div className="container">
-        <div className="section mb-3">
-          <div className="section__header mb-2">
-            <h2>Trending Movies</h2>
-            <Link to="/movie">
-              <OutlineButton className="small">View more</OutlineButton>
-            </Link>
-          </div>
-          <MovieList category={category.movie} type={movieType.popular}/>
-        </div>
 
-        <div className="section mb-3">
-          <div className="section__header mb-2">
-            <h2>Top Rated Movies</h2>
-            <Link to="/movie">
-              <OutlineButton className="small">View more</OutlineButton>
+      <div className="container home-page">
+        {/* LGBT Section */}
+        <section className="section lgbt-section mb-5">
+          <div className="section__header">
+            <h2 className="section__title rainbow-text">🌈 LGBT+ Highlights</h2>
+            <Link to="/lgbt">
+              <Button className="small">Ver mais</Button>
             </Link>
           </div>
-          <MovieList category={category.movie} type={movieType.top_rated}/>
-        </div>
+          <LgbtSection />
+        </section>
 
-        <div className="section mb-3">
-          <div className="section__header mb-2">
-            <h2>Trending TV Series</h2>
-            <Link to="/tv">
-              <OutlineButton className="small">View more</OutlineButton>
-            </Link>
-          </div>
-          <MovieList category={category.tv} type={tvType.popular}/>
-        </div>
+      
+      
 
-        <div className="section mb-3">
-          <div className="section__header mb-2">
-            <h2>Top Rated TV Series</h2>
-            <Link to="/tv">
-              <OutlineButton className="small">View more</OutlineButton>
-            </Link>
-          </div>
-          <MovieList category={category.tv} type={tvType.top_rated}/>
-        </div>
+        
       </div>
     </>
   );
-}
+};
 
 export default Home;

@@ -13,10 +13,9 @@ const Footer = () => {
     <div className='footer' > 
       <div className="footer__content container">
         <div className="footer__content__logo">
-          <div className="logo">
-            <img src={logo} alt="" />
-            <Link to="/">tMovies</Link>
-          </div>
+        <div className="logo">
+          <Link to="/"><h1>BL<span> prime</span></h1></Link>
+        </div>
         </div>
           <div className='footer__content__icons'>
             <Link to='https://www.instagram.com'><FaInstagram className='footer__content__icon'/></Link>

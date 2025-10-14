@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useHistory, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { BiSearch } from 'react-icons/bi';
-
-
 import MovieCard from '../movie-card/MovieCard';
 import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi';
 import Button, { OutlineButton } from '../button/Button';
@@ -11,9 +9,8 @@ import Input from '../input/Input';
 import './movie-grid.scss';
 
 const MovieGrid = props => {
-
+    const navigate = useNavigate()
     const [items, setItems] = useState([]);
-
     const [page, setPage] = useState(1);
     const [totalPage, setTotalPage] = useState(0);
     const { keyword } = useParams();
@@ -80,7 +77,7 @@ const MovieGrid = props => {
             {
                 page < totalPage ? (
                     <div className="movie-grid__loadmore">
-                        <OutlineButton className="small" onClick={loadMore}>Load more ...</OutlineButton>
+                        <Button className="small" onClick={loadMore}>Load more ...</Button>
                     </div>
                 ) : null
             }
@@ -97,7 +94,7 @@ const MovieSearch = props => {
 
     const goToSearch = useCallback(() => {
         if (keyword.trim().length > 0) {
-            history.push(`/${category[props.category]}/search/${keyword}`);
+            navigate(`/${category[props.category]}/search/${keyword}`);
         }
     },
         [keyword, props.category, history]
