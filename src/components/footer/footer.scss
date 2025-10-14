@@ -15,6 +15,10 @@
         &__logo {
             @include flex(center, center);
             margin-bottom: 3rem;
+
+            &__h1 {
+                color: '#f06595';
+            }
         }
 
         
