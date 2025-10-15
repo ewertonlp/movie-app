@@ -9,7 +9,7 @@ import Button, { OutlineButton, LinkButton } from '../button/Button';
 import Modal, { ModalContent } from '../modal/Modal';
 
 import { useNavigate } from 'react-router-dom';
-import './hero-slide.scss';
+import './Hero-slide.scss';
 
 const HeroSlide = () => {
     SwiperCore.use([Autoplay]);
