@@ -65,6 +65,13 @@ Representation matters — and this project aims to make it easier for viewers t
 
 ---
 
+## 📸 Preview
+
+![bl-prime-1](https://github.com/user-attachments/assets/b3f1d3fa-33d0-4301-a906-13e4651a276b)
+
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! 💡
