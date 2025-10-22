@@ -68,6 +68,8 @@ Representation matters — and this project aims to make it easier for viewers t
 ## 📸 Preview
 
 ![bl-prime-1](https://github.com/user-attachments/assets/b3f1d3fa-33d0-4301-a906-13e4651a276b)
+![bl-prime-2](https://github.com/user-attachments/assets/c45b953f-b9aa-47c7-89ae-0a1a5e9eaba9)
+![bl-prime-3](https://github.com/user-attachments/assets/c7ea3461-bc9c-43b2-a597-f2209150f771)
 
 
 ---
