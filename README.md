@@ -1,6 +1,6 @@
 # 🎬 LGBTQIAPN+ Movies and TV Series 🌈
 
-Welcome to **LGBTflix**, a website built with **React + Vite** that consumes the **TMDB (The Movie Database)** API to list, search, and discover **LGBTQIA+ themed movies and TV series**.  
+Welcome to BLPrime, a website built with **React + Vite** that consumes the **TMDB (The Movie Database)** API to list, search, and discover **LGBTQIA+ themed movies and TV series**.  
 This project was created to promote **visibility** and **representation** for the community through cinema and television. 💜
 
 ---
