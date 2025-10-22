@@ -1,6 +1,6 @@
-# 🎬 LGBTflix — LGBTQIA+ Movies and TV Shows 🌈
+# 🎬 LGBTQIAPN+ Movies and TV Series 🌈
 
-Welcome to **LGBTflix**, a website built with **React + Vite** that consumes the **TMDB (The Movie Database)** API to list, search, and discover **LGBTQIA+ themed movies and TV shows**.  
+Welcome to **LGBTflix**, a website built with **React + Vite** that consumes the **TMDB (The Movie Database)** API to list, search, and discover **LGBTQIA+ themed movies and TV series**.  
 This project was created to promote **visibility** and **representation** for the community through cinema and television. 💜
 
 ---
@@ -8,7 +8,7 @@ This project was created to promote **visibility** and **representation** for th
 ## 🚀 Features
 
 ✅ **Complete catalog of movies and series**  
-Explore the most popular LGBTQIA+ titles, with descriptions, posters, and trailers.  
+Explore the most popular LGBTQIAPN+ titles, with descriptions, posters, and trailers.  
 
 ✅ **Custom search**  
 Find productions by name, genre, or keyword.  
@@ -45,10 +45,10 @@ Elegant CSS transitions and subtle page animations for a better user experience.
 
 ## 🔑 Environment Variables
 
-Create a .env file in the project root and add your TMDB API key:
-VITE_TMDB_API_KEY=your-tmdb-api-key
-VITE_TMDB_BASE_URL=https://api.themoviedb.org/3/
-VITE_TMDB_KEYWORD_URL=https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_keywords=289844&with_watch_monetization_types=free
+Create a .env file in the project root and add your TMDB API key
+**VITE_TMDB_API_KEY=your-tmdb-api-key**
+**VITE_TMDB_BASE_URL=https://api.themoviedb.org/3/**
+**VITE_TMDB_KEYWORD_URL=https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_keywords=289844&with_watch_monetization_types=free**
 
 ---
 
