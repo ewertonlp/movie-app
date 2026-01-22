@@ -46,6 +46,7 @@ Elegant CSS transitions and subtle page animations for a better user experience.
 ## 🔑 Environment Variables
 
 Create a .env file in the project root and add your TMDB API key
+
 **VITE_TMDB_API_KEY=your-tmdb-api-key**
 
 **VITE_TMDB_BASE_URL=https://api.themoviedb.org/3/**
