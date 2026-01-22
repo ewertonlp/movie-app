@@ -47,7 +47,9 @@ Elegant CSS transitions and subtle page animations for a better user experience.
 
 Create a .env file in the project root and add your TMDB API key
 **VITE_TMDB_API_KEY=your-tmdb-api-key**
+
 **VITE_TMDB_BASE_URL=https://api.themoviedb.org/3/**
+
 **VITE_TMDB_KEYWORD_URL=https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_keywords=289844&with_watch_monetization_types=free**
 
 ---
@@ -81,6 +83,14 @@ Feel free to open an issue or submit a pull request.
 
 ---
 
-## 🧑‍💻 Author
+#
 
-Ewerton Lopes Pereira
+## 📬 Contact
+
+👤 Ewerton Lopes Pereira
+
+💼 Frontend Developer
+
+🔗 LinkedIn: [https://linkedin.com/in/ewerton-lopes-pereira](https://www.linkedin.com/in/ewerton-lopes-pereira/)
+
+📱 [WhatsApp](https://wa.me/5511973291913)
