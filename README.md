@@ -1,25 +1,21 @@
-# 🎬 LGBTQIAPN+ Movies and TV Series 🌈
+# 🎬 BLPrime – LGBTQIAPN+ Movies & TV Series 🌈
 
-Welcome to BLPrime, a website built with **React + Vite** that consumes the **TMDB (The Movie Database)** API to list, search, and discover **LGBTQIA+ themed movies and TV series**.  
-This project was created to promote **visibility** and **representation** for the community through cinema and television. 💜
+BLPrime is a web application built with **React + Vite** that consumes the **TMDB (The Movie Database) API** to list, search, and discover LGBTQIAPN+ themed movies and TV series.
+
+This project was created to promote **visibility and representation** for the LGBTQIAPN+ community through cinema and television.
 
 ---
 
 ## 🚀 Features
 
-✅ **Complete catalog of movies and series**  
-Explore the most popular LGBTQIAPN+ titles, with descriptions, posters, and trailers.  
+### 🎥 Complete catalog
+Browse popular LGBTQIAPN+ movies and TV series with posters, descriptions, ratings, and trailers.
 
-✅ **Custom search**  
-Find productions by name, genre, or keyword.  
+### 🔎 Custom search
+Search productions by title, genre, or keyword.
 
-✅ **Detailed view**  
-See synopsis, cast, rating, and high-resolution images.  
-
-✅ **Special sections**  
-- Featured movies  
-- Trending series  
-- Keyword highlights (`LGBT`, `Queer`, etc.)
+### 📄 Detailed view
+Access detailed information including synopsis, cast, rating, and high-resolution images.
 
 ✅ **Responsive design**  
 Modern interface fully optimized for any device (mobile, tablet, or desktop).  
@@ -27,19 +23,30 @@ Modern interface fully optimized for any device (mobile, tablet, or desktop).
 ✅ **Smooth animations**  
 Elegant CSS transitions and subtle page animations for a better user experience.  
 
+### ⭐ Special sections
+- Featured movies  
+- Trending series  
+- Keyword highlights (LGBT, Queer, etc.)
+
+### 📱 Responsive design
+Fully responsive layout optimized for mobile, tablet, and desktop.
+
+### ✨ Smooth animations
+Subtle transitions and animations to enhance user experience.
+
+---
+
 ---
 
 ## 🧰 Technologies Used
 
-| Technology | Description |
-|-------------|-------------|
-| ⚡ **Vite** | Ultra-fast build tool |
-| ⚛️ **React.js** | Main library for building the interface |
-| 🎨 **Sass (SCSS)** | Modular and reusable styling |
-| 🌈 **TMDB API** | Source for movie and series data |
-| 🔗 **Axios / Fetch API** | API communication layer |
-| 🔥 **React Router** | Navigation between pages |
-| 🪄 **Responsive Design** | Fully mobile-friendly layout |
+- **Vite** – Fast build tool
+- **React.js** – UI library
+- **Sass (SCSS)** – Modular and reusable styles
+- **TMDB API** – Movie and TV series data
+- **Axios / Fetch API** – API communication
+- **React Router** – Application routing
+- **Responsive Design** – Mobile-first approach
 
 ---
 
@@ -77,6 +84,16 @@ Representation matters — and this project aims to make it easier for viewers t
 
 ---
 
+## 📚 What I practiced in this project
+
+-- Consumption of external REST APIs
+-- State management and data fetching
+-- Component-based architecture with React
+-- Responsive UI and accessibility considerations
+-- Environment variable configuration
+--Project deployment with Vercel
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! 💡
@@ -89,9 +106,6 @@ Feel free to open an issue or submit a pull request.
 ## 📬 Contact
 
 👤 Ewerton Lopes Pereira
-
 💼 Frontend Developer
-
 🔗 LinkedIn: [https://linkedin.com/in/ewerton-lopes-pereira](https://www.linkedin.com/in/ewerton-lopes-pereira/)
-
 📱 [WhatsApp](https://wa.me/5511973291913)
