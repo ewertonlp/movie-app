@@ -4,7 +4,6 @@ BLPrime is a web application built with **React + Vite** that consumes the **TMD
 
 This project was created to promote **visibility and representation** for the LGBTQIAPN+ community through cinema and television.
 
----
 
 ## 🚀 Features
 
@@ -34,7 +33,6 @@ Fully responsive layout optimized for mobile, tablet, and desktop.
 ### ✨ Smooth animations
 Subtle transitions and animations to enhance user experience.
 
----
 
 
 ## 🧰 Technologies Used
@@ -47,7 +45,7 @@ Subtle transitions and animations to enhance user experience.
 - **React Router** – Application routing
 - **Responsive Design** – Mobile-first approach
 
----
+
 
 ## 🔑 Environment Variables
 
@@ -59,20 +57,20 @@ Create a .env file in the project root and add your TMDB API key
 
 **VITE_TMDB_KEYWORD_URL=https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&include_adult=true&include_video=false&page=1&with_keywords=289844&with_watch_monetization_types=free**
 
----
+
 
 ## 🌍 Deployment
 
 The project is hosted on Vercel: https://movie-app-eta-lime-27.vercel.app/
 
----
+
 
 ## 💬 About the Project
 
 LGBTflix was created to highlight and celebrate LGBTQIA+ stories in cinema and television.
 Representation matters — and this project aims to make it easier for viewers to find and enjoy media that reflects their identities and experiences.
 
----
+
 
 ## 📸 Preview
 
@@ -81,7 +79,6 @@ Representation matters — and this project aims to make it easier for viewers t
 ![bl-prime-3](https://github.com/user-attachments/assets/c7ea3461-bc9c-43b2-a597-f2209150f771)
 
 
----
 
 ## 📚 What I practiced in this project
 
@@ -98,11 +95,14 @@ Representation matters — and this project aims to make it easier for viewers t
 Contributions are welcome! 💡
 Feel free to open an issue or submit a pull request.
 
----
+
 
 ## 📬 Contact
 
 👤 Ewerton Lopes Pereira
+
 💼 Frontend Developer
+
 🔗 LinkedIn: [https://linkedin.com/in/ewerton-lopes-pereira](https://www.linkedin.com/in/ewerton-lopes-pereira/)
+
 📱 [WhatsApp](https://wa.me/5511973291913)
