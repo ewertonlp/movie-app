@@ -36,7 +36,6 @@ Subtle transitions and animations to enhance user experience.
 
 ---
 
----
 
 ## 🧰 Technologies Used
 
@@ -100,8 +99,6 @@ Contributions are welcome! 💡
 Feel free to open an issue or submit a pull request.
 
 ---
-
-#
 
 ## 📬 Contact
 
